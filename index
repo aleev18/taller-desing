@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Landing Page</title>
+  <style>
+    /* ------ Reset básico ------ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #111; }
+
+    /* ------ Contenedor central ------ */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ------ Hero (arriba) ------ */
+    header {
+      background: url('ruta/a/tu-imagen-hero.jpg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+    }
+    header .hero-content {
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    header a.btn {
+      background: #ff4c4c;
+      color: #fff;
+      padding: 0.9rem 1.8rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    header a.btn:hover {
+      background: #e64343;
+    }
+
+    /* ------ Secciones ------ */
+    section {
+      padding: 4rem 0;
+    }
+    .grid {
+      display: grid;
+      gap: 1.8rem;
+    }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+    .feature-card {
+      text-align: center;
+      padding: 1.8rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fff;
+      transition: 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .feature-card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .feature-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    /* ------ Testimonios ------ */
+    .testimonials {
+      background: #f7f7f7;
+      border-radius: 8px;
+    }
+    .testimonial {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* ------ Footer ------ */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ffdd57;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero principal -->
+  <header>
+    <div class="hero-content container">
+      <h1>Bienvenido a Mi Landing Page</h1>
+      <p>Servicio increíble o producto que resuelve un problema real</p>
+      <a href="#productos" class="btn">Ver Productos</a>
+    </div>
+  </header>
+
+  <!-- Beneficios / Características -->
+  <section class="container">
+    <h2 style="text-align:center; margin-bottom:2rem;">¿Por qué elegirnos?</h2>
+    <div class="grid grid-3">
+      <div class="feature-card">
+        <img src="ruta/a/imagen1.jpg" alt="Característica 1">
+        <h3>Título Atractivo</h3>
+        <p>Descripción breve de la ventaja o característica principal.</p>
+      </div>
+      <div class="feature-card">
+        <img src="ruta/a/imagen2.jpg" alt="Característica 2">
+        <h3>Título Atractivo</h3>
+        <p>Descripción breve de la ventaja o característica principal.</p>
+      </div>
+      <div class="feature-card">
+        <img src="ruta/a/imagen3.jpg" alt="Característica 3">
+        <h3>Título Atractivo</h3>
+        <p>Descripción breve de la ventaja o característica principal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos / Llamado a acción -->
+  <section id="productos" class="container">
+    <h2 style="text-align:center; margin-bottom:2rem;">Nuestros Productos</h2>
+    <div class="grid grid-3">
+      <div class="feature-card">
+        <img src="ruta/a/producto1.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Descripción breve del producto y sus beneficios.</p>
+      </div>
+      <div class="feature-card">
+        <img src="ruta/a/producto2.jpg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Descripción breve del producto y sus beneficios.</p>
+      </div>
+      <div class="feature-card">
+        <img src="ruta/a/producto3.jpg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Descripción breve del producto y sus beneficios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials container">
+    <h2 style="text-align:center; margin-bottom:2rem;">Lo que dicen nuestros clientes</h2>
+    <div class="grid grid-3">
+      <div class="testimonial">
+        "Excelente producto, super recomendado."
+        <strong>- Cliente Satisfecho</strong>
+      </div>
+      <div class="testimonial">
+        "Servicio rápido y atención impecable."
+        <strong>- Comprador Feliz</strong>
+      </div>
+      <div class="testimonial">
+        "Muy buena experiencia, volveré pronto."
+        <strong>- Usuario Contento</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Mi Sitio Web | <a href="#productos">Productos</a> | <a href="#contacto">Contacto</a></p>
+  </footer>
+
+</body>
+</html>
